@@ -25,19 +25,19 @@ jsdom-global now requires jsdom v10 or above. If you need jsdom v9 and below, us
 Just invoke it to turn your Node.js environment into a DOM environment.
 
 ```js
-require('jsdom-global')()
+require('jsdom-global-fork')()
 
 // you can now use the DOM
 document.body.innerHTML = 'hello'
 ```
 
-You may also pass parameters to jsdomGlobal() like so: `require('jsdom-global')(html, options)`.
+You may also pass parameters to jsdomGlobal() like so: `require('jsdom-global-fork')(html, options)`.
 Check the [jsdom.jsdom()][] documentation for valid values for the `options` parameter.
 
 To clean up after itself, just invoke the function it returns.
 
 ```js
-var cleanup = require('jsdom-global')()
+var cleanup = require('jsdom-global-fork')()
 
 // do things
 
@@ -49,7 +49,7 @@ cleanup()
 In [tape][], run it before your other tests.
 
 ```js
-require('jsdom-global')()
+require('jsdom-global-fork')()
 
 test('your tests', (t) => {
   /* and so on... */
@@ -68,7 +68,7 @@ __Advanced:__ For finer control, you can instead add it via [mocha]'s `before` a
 
 ```js
 before(function () {
-  this.jsdom = require('jsdom-global')()
+  this.jsdom = require('jsdom-global-fork')()
 })
 
 after(function () {
@@ -93,7 +93,7 @@ import jQuery from 'jquery'
 
 ## Browserify
 
-If you use [Browserify] on your tests (eg: [smokestack], [tape-run], [budo], [hihat], [zuul], and so on), doing `require('jsdom-global')()` is a noop. In practice, this means you can use jsdom-global even if your tests are powered by browserify, and your test will now work in both the browser and Node.
+If you use [Browserify] on your tests (eg: [smokestack], [tape-run], [budo], [hihat], [zuul], and so on), doing `require('jsdom-global-fork')()` is a noop. In practice, this means you can use jsdom-global even if your tests are powered by browserify, and your test will now work in both the browser and Node.
 
 [zuul]: https://www.npmjs.com/package/zuul
 [tape-run]: https://www.npmjs.com/package/tape-run
@@ -104,7 +104,7 @@ If you use [Browserify] on your tests (eg: [smokestack], [tape-run], [budo], [hi
 * Writing your tests (`test.js`):
 
   ```js
-  require('jsdom-global')()
+  require('jsdom-global-fork')()
 
   // ...do your tests here
   ```
