@@ -1,6 +1,6 @@
 # jsdom-global
 
-> Enables DOM in Node.js
+> Enable DOM in Node.js ~ This is a fork locking its version @ 3.0.2 for pixi-shim package
 
 jsdom-global will inject `document`, `window` and other DOM API into your Node.js environment. Useful for running, in Node.js, tests that are made for browsers.
 
