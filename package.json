@@ -1,11 +1,11 @@
 {
-  "name": "jsdom-global",
+  "name": "jsdom-global-fork",
   "description": "Enable DOM in Node.js",
   "version": "3.0.2",
   "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
   "browser": "browser.js",
   "bugs": {
-    "url": "https://github.com/rstacruz/jsdom-global/issues"
+    "url": "https://github.com/Prozi/jsdom-global/issues"
   },
   "dependencies": {
     "jsdom-fork": "^11.12.0"
@@ -14,7 +14,7 @@
     "standard": "~10.0.2",
     "tape": "~4.6.3"
   },
-  "homepage": "https://github.com/rstacruz/jsdom-global#readme",
+  "homepage": "https://github.com/Prozi/jsdom-global#readme",
   "keywords": [
     "dom",
     "jsdom",
@@ -24,7 +24,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rstacruz/jsdom-global.git"
+    "url": "git+https://github.com/Prozi/jsdom-global.git"
   },
   "scripts": {
     "test": "node test.js && standard"
